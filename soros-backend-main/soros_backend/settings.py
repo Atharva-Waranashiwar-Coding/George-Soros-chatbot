@@ -53,7 +53,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'buffet_backend.urls'
+ROOT_URLCONF = 'soros_backend.urls'
 
 TEMPLATES = [
     {
@@ -70,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'buffet_backend.wsgi.application'
+WSGI_APPLICATION = 'soros_backend.wsgi.application'
 
 
 # Database

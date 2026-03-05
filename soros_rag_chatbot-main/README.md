@@ -1,59 +1,28 @@
-# George Soros AI Chatbot
+# Soros RAG Core (Trimmed)
 
-A RAG-based chatbot that provides educational insights inspired by George Soros's investment philosophy.
+This folder now contains only the reusable RAG core modules.
 
-## Features
+## Kept Modules
 
-- 💬 Interactive Streamlit UI with Soros-themed design
-- 📚 RAG (Retrieval-Augmented Generation) using ChromaDB
-- 🧠 Powered by Google Gemini AI
-- 📊 Market data integration via yfinance
-- 💡 Educational insights on reflexivity, market psychology, and macro analysis
+- `rag_interface.py`
+- `rag_retriever.py`
+- `rag_generator.py`
+- `rag_data.py`
+- `ticker_utils.py`
+- `market_data.py`
 
-## Installation
+These modules are kept as reference/core logic and can be reused by backend services.
 
-1. Activate your virtual environment:
+## Data / Storage
+
+- `data/Soros_Questions.xlsx` (knowledge base)
+- `chroma_db/` (persisted embeddings)
+
+## Setup
+
 ```bash
-venv\Scripts\activate
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+export GOOGLE_API_KEY="YOUR_KEY"
 ```
-
-2. Install Streamlit (if not already installed):
-```bash
-pip install streamlit
-```
-
-## Running the Application
-
-### Streamlit UI (Recommended)
-```bash
-streamlit run app.py
-```
-
-The app will open in your browser at `http://localhost:8501`
-
-### CLI Version
-```bash
-python chat_cli.py
-```
-
-## Usage
-
-Simply type your questions about:
-- Trading strategies
-- Investment philosophy
-- Market analysis
-- Soros's concepts (reflexivity, feedback loops, etc.)
-- Specific tickers (e.g., "What would Soros think about TSLA?")
-
-**Note:** This chatbot provides educational content only and is NOT financial advice.
-
-## Project Structure
-
-- `app.py` - Streamlit UI application
-- `chat_cli.py` - Command-line interface
-- `rag_interface.py` - Main RAG chatbot logic
-- `rag_retriever.py` - ChromaDB retrieval system
-- `rag_generator.py` - Gemini answer generation
-- `ticker_utils.py` - Ticker extraction utilities
-- `market_data.py` - Market data fetching
-- `data/Soros_Questions.xlsx` - Knowledge base

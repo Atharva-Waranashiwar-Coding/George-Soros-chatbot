@@ -37,7 +37,7 @@ const ModelSelector = ({ model, setModel }) => {
 function ChatbotPage() {
     const { messages, loading, sendMessage, transformerToken, setTransformerToken } = useChat();
     const [input, setInput] = useState('');
-    const [selectedModel, setSelectedModel] = useState('gemini');
+    const [selectedModel, setSelectedModel] = useState('rag');
 
     const messagesEndRef = useRef(null);
     const messageContainerRef = useRef(null);

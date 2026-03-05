@@ -12,7 +12,7 @@ try:
     GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
     if not GEMINI_API_KEY:
         try:
-            from buffet_backend import secrets
+            from soros_backend import secrets
             GEMINI_API_KEY = getattr(secrets, "GEMINI_API_KEY", None)
         except Exception:
             GEMINI_API_KEY = None
